@@ -1,6 +1,8 @@
 .homepage__container{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-    /* height: 80vh; */
+    height: auto;
+    width: 80%;
+    margin: auto;
 }
 
 .homepage__container-toprow{
@@ -16,7 +18,7 @@
 }
 
 .homepage__container-company Button{
-    width: 6.5rem;
+    width: 100%;
     height: 2rem;
     margin-top: 1.5rem;
 }
@@ -38,8 +40,45 @@
     color: grey;
 }
 
+.homepage__container-datatable-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+    margin: 2rem auto;
+    padding: 10px;
+    margin-bottom: 5rem;
+}
+.homepage__container-datatable-div__footer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.MuiDataGrid-cell{
+    border: none !important;
+}
+.css-1e2bxag-MuiDataGrid-root{
+    border: none !important;
+    font-weight: 550 !important;
+}
+.css-yrdy0g-MuiDataGrid-columnHeaderRow{
+    border-bottom: 2px solid #a7a7a7;
+}
+
+.css-1jbbcbn-MuiDataGrid-columnHeaderTitle{
+    font-weight: bolder !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: grey !important;
+    font-weight: bold !important;
+}
 
 @media screen and (max-width: 500px) {
+    .homepage__container{
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        height: 100vh;
+    }
     .homepage__container-toprow{
         display: flex;
         justify-content: space-around;
@@ -50,13 +89,14 @@
 
     .homepage__container-company{
         justify-content: flex-start;
+        width: 70%;
         margin-left: 0.5rem;
     }
     .homepage__container-search{
         justify-content: flex-start;
         margin-left: 0.5rem;
         margin-top: 1rem;
-        width: 90%;
+        width: 100%;
     }
     .homepage__container-showEntries{
         display: flex;
@@ -64,5 +104,10 @@
         margin-top: 3rem;
         margin-left: 0.5rem;
         color: grey;
+    }
+
+    .homepage__container-datatable-div__footer{
+        flex-direction: column;
+        width: 60%;
     }
 }
