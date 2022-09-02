@@ -1,9 +1,12 @@
 import React from 'react'
 import { Box, Button, TextField } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
+import { useNavigate  } from "react-router-dom";
 import './homepage.css'
 
-export default function HomePage() {
+export default function HomePage(props) {
+  const navigate = useNavigate()
+
   const table_cols = [{ field: 'cin', headerName: 'CIN', flex: 2 },
   { field: 'company', headerName: 'Name', flex: 2 }]
 
@@ -15,7 +18,11 @@ export default function HomePage() {
       <Box className='homepage__container'>
         <div className='homepage__container-toprow'>
           <div className='homepage__container-company'>
-            <Button variant="contained" color="secondary" size="small">{`COMPANY +`}</Button>
+            <Button variant="contained" color="secondary" size="small"
+              onClick={() => {
+                navigate("/add")
+              }}
+            >{`COMPANY +`}</Button>
           </div>
 
           <div className='homepage__container-search'>
@@ -27,7 +34,7 @@ export default function HomePage() {
           <span>show entries</span>
         </div>
 
-        <div className="homepage__container-datatable-div" style={{ height: '40vh' }}>
+        <div className="homepage__container-datatable-div" style={{ height: '50vh' }}>
           <DataGrid
             rows={table_rows}
             columns={table_cols}
