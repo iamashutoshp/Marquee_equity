@@ -1,0 +1,68 @@
+.homepage__container{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    /* height: 80vh; */
+}
+
+.homepage__container-toprow{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    margin: 1rem 0rem;
+}
+
+.homepage__container-company{
+    display: flex;
+    justify-content: center;
+}
+
+.homepage__container-company Button{
+    width: 6.5rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+}
+
+.homepage__container-search{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    width: 70%;
+}
+.homepage__container-showEntries{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    margin-left: 8%;
+    color: grey;
+}
+
+
+@media screen and (max-width: 500px) {
+    .homepage__container-toprow{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: auto;
+        margin: 0.5rem 0rem;
+    }
+
+    .homepage__container-company{
+        justify-content: flex-start;
+        margin-left: 0.5rem;
+    }
+    .homepage__container-search{
+        justify-content: flex-start;
+        margin-left: 0.5rem;
+        margin-top: 1rem;
+        width: 90%;
+    }
+    .homepage__container-showEntries{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 3rem;
+        margin-left: 0.5rem;
+        color: grey;
+    }
+}
