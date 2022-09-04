@@ -52,8 +52,13 @@
 }
 .homepage__container-datatable-div__footer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 2rem;
+}
+
+.homepage__container-datatable-div__footer-buttons{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .MuiDataGrid-cell{
